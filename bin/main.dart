@@ -16,7 +16,6 @@ void main() async {
 
   final String filePath = p.join(directoryPath, fileName);
 
-
   while (true) {
     stdout.write('''
     Menu:

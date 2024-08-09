@@ -1,18 +1,9 @@
+import './subject.dart';
+
 class Student {
   int id;
   String name;
-  Student(this.id, this.name);
+  List<Subject> subjects;
 
-  Map<String, dynamic> toJson() {
-    return {'id': id, 'name': name};
-  }
-
-  static Student fromJson(Map<String, dynamic> json) {
-    return Student(json['id'], json['name']);
-  }
-
-  @override
-  String toString() {
-    return 'ID: $id, Name: $name';
-  }
+  Student({required this.id, required this.name, required this.subjects});
 }

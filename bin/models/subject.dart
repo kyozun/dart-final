@@ -1,5 +1,6 @@
 class Subject {
-  List<int> score;
+  String subjectName;
+  List<int> scores;
 
-  Subject(this.score);
+  Subject({required this.subjectName, required this.scores});
 }
