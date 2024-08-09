@@ -24,7 +24,7 @@ class StudentServiceImplement implements StudentService {
     // Lấy danh sách sinh viên từ file
     var students = await getAllStudents(filePath);
 
-    // Lưu vào file 
+    // Lưu vào file
     Student student = Student(id, name);
 
     // Thêm sinh viên vao List
@@ -76,7 +76,7 @@ class StudentServiceImplement implements StudentService {
   }
 
   @override
-  Future<void> saveStudent(String filePath,  List<Student> students) {
+  Future<void> saveStudent(String filePath, List<Student> students) {
     // TODO: implement saveStudent
     throw UnimplementedError();
   }
@@ -85,5 +85,16 @@ class StudentServiceImplement implements StudentService {
   Future<void> updateStudent() {
     // TODO: implement updateStudent
     throw UnimplementedError();
+  }
+
+  @override
+  Future<void> displayStudent(String filePath) async {
+    List<Student> students = await getAllStudents(filePath);
+    if (students.isEmpty) {
+      print('Student is empty');
+    }
+    for (var student in students) {
+      print(student);
+    }
   }
 }

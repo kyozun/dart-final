@@ -7,7 +7,7 @@ void main() async {
   const String fileName = 'student.json';
   final String directoryPath = p.join(Directory.current.path, 'data');
   
-  /* Thu muc se luu file */
+  /* Thư mục sẽ lưu file */
   final Directory directory = Directory(directoryPath);
 
   if (!await directory.exists()) {
@@ -34,7 +34,7 @@ void main() async {
     switch (choice) {
       case '1':
       print(filePath);
-        await studentService.getAllStudents(filePath);
+        await studentService.displayStudent(filePath);
         break;
       case '2':
         await studentService.addStudent(filePath);

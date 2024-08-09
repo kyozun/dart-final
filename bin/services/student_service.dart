@@ -5,6 +5,8 @@ abstract class StudentService {
 
   Future<List<Student>> getAllStudents(String filePath);
 
+  Future<void> displayStudent(String filePath);
+
   Future<void> saveStudent(String filePath, List<Student> students);
 
   Future<void> deleteStudent();
