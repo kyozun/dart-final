@@ -6,7 +6,7 @@ import 'package:path/path.dart' as p;
 void main() async {
   const String fileName = 'student.json';
   final String directoryPath = p.join(Directory.current.path, 'data');
-  
+
   /* Thư mục sẽ lưu file */
   final Directory directory = Directory(directoryPath);
 
@@ -24,7 +24,8 @@ void main() async {
     3. Update Student
     4. Find Student
     5. Get Highest Score
-    6. Exit
+    6. Delete Student
+    7. Exit
     Enter number: ''');
 
     String? choice = stdin.readLineSync();
@@ -32,7 +33,6 @@ void main() async {
 
     switch (choice) {
       case '1':
-      print(filePath);
         await studentService.displayStudent(filePath);
         break;
       case '2':
@@ -48,6 +48,9 @@ void main() async {
         await studentService.getStudentHighestScore();
         break;
       case '6':
+        await studentService.deleteStudent();
+        break;
+      case '7':
         print('Good bye');
         exit(0);
       default:

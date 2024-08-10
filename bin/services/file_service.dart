@@ -1,8 +1,9 @@
+import '../models/student.dart';
 
 abstract class FileService {
   // Read
-  Map<String, dynamic> readData(String filePath);
+ List<Student> readData(String filePath);
 
   // Write
-  void writeData(String filePath, Map<String, dynamic> data);
+  void writeData(String filePath, List<Student> data);
 }

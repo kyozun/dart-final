@@ -1,1 +1,1 @@
-{}
+{"students":[{"id":1,"name":"cuong","subjects":[{"subjectName":"toan","scores":[2,3,4]},{"subjectName":"ly","scores":[2,3,4]},{"subjectName":"hoa","scores":[2,3,4]}]},{"id":2,"name":"hoa","subjects":[{"subjectName":"toan","scores":[2,3,5]},{"subjectName":"ly","scores":[4,5,6]},{"subjectName":"hoa","scores":[6,7,8]}]}]}
