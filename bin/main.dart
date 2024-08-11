@@ -2,6 +2,7 @@ import 'dart:io';
 import 'services/student_service.dart';
 import 'services_implement/student_service_implement.dart';
 import 'package:path/path.dart' as p;
+import './types/find_by.dart';
 
 void main() async {
   const String fileName = 'student.json';
@@ -33,25 +34,24 @@ void main() async {
 
     switch (choice) {
       case '1':
-        await studentService.displayStudent(filePath);
+        await studentService.displayStudent(filePath, FindBy.all);
         break;
       case '2':
         await studentService.addStudent(filePath);
         break;
       case '3':
-        await studentService.updateStudent();
+        await studentService.updateStudent(filePath);
         break;
       case '4':
-        await studentService.findStudentByName();
+        await studentService.findStudentByName(filePath, FindBy.name);
         break;
       case '5':
-        await studentService.getStudentHighestScore();
+        await studentService.getStudentHighestScore(filePath);
         break;
       case '6':
-        await studentService.deleteStudent();
+        await studentService.deleteStudent(filePath);
         break;
       case '7':
-        print('Good bye');
         exit(0);
       default:
         print('Invalid number');

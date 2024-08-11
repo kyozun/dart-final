@@ -10,10 +10,10 @@ class FileServiceImplement implements FileService {
     var file = File(filePath);
     var jsonData = file.readAsStringSync();
 
-    // decode the json
+    // Decode the json
     List<dynamic> parsedJson = jsonDecode(jsonData)['students'] ;
 
-    // convert parsedJson to Class  
+    // Convert parsedJson to Class  
     var students = parsedJson.map((parsedJson) => Student.fromJson(parsedJson)).toList();
     return students;
   }

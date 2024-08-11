@@ -1,0 +1,4 @@
+enum FindBy {
+  all,
+  name
+}
